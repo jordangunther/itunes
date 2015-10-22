@@ -32,10 +32,12 @@ var songData = [];
         var songObject = {
           AlbumArt: res.data.results[i].artworkUrl30,
           Artist: res.data.results[i].artistName,
+          Song: res.data.results[i].trackName,
           Collection: res.data.results[i].collectionName,
-          SongPrice: res.data.results[i].collectionPrice,
+          Price: res.data.results[i].trackPrice,
+          CollectionPrice: res.data.results[i].collectionPrice,
           Play: res.data.results[i].previewUrl,
-          Type: res.data.results[i].trackName
+          Type: res.data.results[i].kind
         }
         songData.push(songObject);
       }
